@@ -5,7 +5,7 @@ import Head from 'next/head';
 
 export default function FuturisticIPTV() {
   const [isScrolled, setIsScrolled] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -15,401 +15,237 @@ export default function FuturisticIPTV() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#000000] via-[#0a0a1a] to-[#000000] text-gray-200 font-sans">
       <Head>
-        <title>NexusStream | Premium IPTV Service</title>
-        <meta name="description" content="Experience the future of streaming with NexusStream - Global channels, 4K quality, no buffering" />
+        <title>AuraTV | AI-Enhanced Streaming</title>
+        <meta name="description" content="Welcome to the next evolution of entertainment. AuraTV uses AI to deliver a seamless, personalized, and ultra-high-definition streaming experience." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {/* Navigation */}
-      <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900/90 backdrop-blur-md py-3' : 'bg-transparent py-6'}`}>
-        <nav className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
-            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
-              NexusStream
+      <header className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 py-4' : 'bg-transparent py-6'}`}>
+        <nav className="container mx-auto px-6 flex justify-between items-center">
+          <div className="flex items-center space-x-3">
+            <div className="w-12 h-12 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(0,255,255,0.5)]">
+              <span className="text-2xl font-bold text-white">A</span>
+            </div>
+            <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-purple-400">
+              AuraTV
             </span>
           </div>
-          
-          <div className="hidden md:flex space-x-8">
-            {['Home', 'Free Trial', 'Renew', 'Features', 'FAQ'].map((item) => (
-              <a key={item} href={`#${item.toLowerCase().replace(' ', '-')}`} className="font-medium hover:text-cyan-400 transition-colors">
+
+          <div className="hidden md:flex items-center space-x-10">
+            {['Home', 'AI Features', 'Pricing', 'FAQ'].map((item) => (
+              <a key={item} href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-lg font-medium text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,255,0.7)]">
                 {item}
               </a>
             ))}
           </div>
-          
-          <button className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105">
-            Start Trial
+
+          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-7 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-110 shadow-[0_0_10px_rgba(0,255,255,0.5)] hover:shadow-[0_0_20px_rgba(192,132,252,0.7)]">
+            Initiate Trial
           </button>
         </nav>
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="pt-40 pb-28 px-4 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-20">
-          <div className="absolute -top-1/3 -left-1/4 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-cyan-500/30 to-blue-500/30"></div>
-          <div className="absolute -bottom-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-purple-500/30 to-pink-500/30"></div>
-        </div>
+      <section id="home" className="min-h-screen flex items-center justify-center text-center relative overflow-hidden px-4">
+        <div className="absolute inset-0 w-full h-full bg-black/50"></div>
+        <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-[-1] opacity-30">
+          <source src="https://cdn.pixabay.com/video/2021/11/14/9583-667202353_large.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
         
-        <div className="container mx-auto relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
-                The Future of Streaming
+        <div className="relative z-10 flex flex-col items-center">
+            <h1 className="text-6xl md:text-8xl font-extrabold mb-6 leading-tight tracking-wide">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-purple-500 drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]">
+                AI-Powered Streaming
               </span><br />
-              Is Here
+              Redefined.
             </h1>
-            <p className="text-xl text-gray-300 mb-10 max-w-2xl">
-              Experience global live sports, premium channels, and 4K entertainment without buffering. Stream seamlessly across multiple devices.
+            <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              AuraTV's intelligent platform learns your preferences to curate a personalized universe of entertainment. Experience flawless 4K/8K streaming, predictive content delivery, and zero buffering.
             </p>
             
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105">
-                Start Free Trial
+            <div className="flex flex-wrap gap-6">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-10 py-5 rounded-full font-bold text-xl transition-all duration-300 transform hover:scale-110 shadow-[0_0_15px_rgba(0,255,255,0.5)] hover:shadow-[0_0_25px_rgba(192,132,252,0.8)]">
+                Activate 48-Hour AI Trial
               </button>
-              <button className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-xl font-bold text-lg border border-gray-700 transition-all">
-                Renew My Access
+              <button className="bg-black/50 backdrop-blur-lg hover:bg-gray-800/70 text-white px-10 py-5 rounded-full font-bold text-xl border-2 border-cyan-400/50 hover:border-cyan-300 transition-all duration-300 shadow-[0_0_10px_rgba(0,255,255,0.3)] hover:shadow-[0_0_20px_rgba(0,255,255,0.5)]">
+                Explore Plans
               </button>
             </div>
-          </div>
         </div>
       </section>
-
-      {/* Overview Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center max-w-3xl">
-          <div className="inline-block px-6 py-2 bg-gray-800 rounded-full mb-6">
-            <span className="text-cyan-400 font-medium">OUR STORY</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            From Humble Beginnings to Global Streaming
-          </h2>
-          <p className="text-xl text-gray-300">
-            What started as a simple idea has transformed into a premier IPTV service, delivering exceptional entertainment to over <span className="text-cyan-400 font-bold">60,000 users</span> worldwide. We&apos;re constantly evolving to bring you the best streaming experience possible.
-          </p>
-        </div>
-      </section>
-
-      {/* Brand Logos */}
-      <section className="py-16 px-4">
+      
+      {/* AI Features Section */}
+      <section id="ai-features" className="py-24 px-4">
         <div className="container mx-auto">
-          <h3 className="text-center text-2xl font-bold mb-12">Compatible with Your Favorite Platforms</h3>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 place-items-center">
-            {['Netflix', 'Disney+', 'HBO Max', 'Prime Video', 'Hulu'].map((brand) => (
-              <div key={brand} className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 w-full max-w-[180px] h-24 flex items-center justify-center transition-all hover:bg-gray-700/50 hover:border-cyan-500/30">
-                <span className="text-xl font-bold">{brand}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Metrics Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <MetricCard value="60,000+" label="Accounts Delivered" />
-            <MetricCard value="120+" label="Countries Served" />
-            <MetricCard value="4.9/5" label="Client Ratings" />
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Started in 4 Simple Steps</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">Experience premium streaming in minutes, not hours</p>
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-purple-400">The AuraTV Intelligence Core</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">Our proprietary AI enhances every aspect of your viewing experience. Discover the future of television.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <StepCard 
-              number={1} 
-              title="Request Free Trial" 
-              description="Sign up for our risk-free trial to test our service"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AIFeatureCard 
+              title="Predictive Streaming" 
+              description="Our AI analyzes network conditions and predicts your viewing habits to preload content, eliminating buffering before it even starts."
             />
-            <StepCard 
-              number={2} 
-              title="Choose Device/App" 
-              description="Select your preferred streaming device or application"
+            <AIFeatureCard 
+              title="Personalized Discovery" 
+              description="AuraTV learns what you love and suggests new shows and movies from across the globe with uncanny accuracy. Your next favorite is waiting."
             />
-            <StepCard 
-              number={3} 
-              title="Activate & Watch" 
-              description="Follow simple setup instructions and start streaming"
+            <AIFeatureCard 
+              title="Adaptive Bitrate" 
+              description="Enjoy uninterrupted crystal-clear quality. The AI dynamically adjusts the stream bitrate in real-time to match your internet speed, ensuring a flawless picture."
             />
-            <StepCard 
-              number={4} 
-              title="Renew Anytime" 
-              description="Continue your subscription with flexible renewal options"
+             <AIFeatureCard 
+              title="Smart EPG" 
+              description="Our intelligent program guide organizes your channels based on your viewing history, putting your most-watched content front and center."
+            />
+             <AIFeatureCard 
+              title="Voice-Activated Control" 
+              description="Simply speak to find content, change channels, or get recommendations. AuraTV's natural language processing understands you perfectly."
+            />
+             <AIFeatureCard 
+              title="Automated Content Tagging" 
+              description="Our AI scans and tags all content for genre, mood, actors, and more, allowing for incredibly specific searches and discovery."
             />
           </div>
         </div>
       </section>
 
       {/* Pricing Plans */}
-      <section id="pricing" className="py-20 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section id="pricing" className="py-24 px-4 bg-black/30">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">One premium plan with flexible durations to suit your needs</p>
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-purple-400">Choose Your Subscription Tier</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">Unlock the power of AI-driven entertainment with a plan that suits you. All tiers include our core AI features.</p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <PricingCard duration="1 Month" price={16.99} popular={false} />
-            <PricingCard duration="3 Months" price={45.99} popular={true} />
-            <PricingCard duration="6 Months" price={79.99} popular={false} />
-            <PricingCard duration="1 Year" price={109.99} popular={false} />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <PricingCard duration="Standard" price={19.99} popular={false} features={['10,000+ Channels', '4K Streaming', '2 Concurrent Devices', 'AI Predictive Streaming', '7-Day Catch Up']} />
+            <PricingCard duration="Premium" price={29.99} popular={true} features={['20,000+ Channels', '4K/8K Streaming', '4 Concurrent Devices', 'All AI Features', '14-Day Catch Up', 'Priority Support']} />
+            <PricingCard duration="Ultimate" price={49.99} popular={false} features={['All Channels + VOD', '4K/8K HDR Streaming', '6 Concurrent Devices', 'All AI Features', '30-Day Catch Up', 'Dedicated Support Agent']} />
           </div>
-          
-          <div className="mt-12 text-center">
-            <p className="text-gray-400">Secure checkout with PayPal, Credit Cards, and Bitcoin (10% discount for crypto payments)</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Comparison */}
-      <section id="features" className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Premium Features for Ultimate Streaming</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">Everything you need for a seamless entertainment experience</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <FeatureCard 
-              title="Unlimited Entertainment" 
-              description="Access thousands of channels and on-demand content"
-            />
-            <FeatureCard 
-              title="HD/4K Quality" 
-              description="Crystal clear picture quality with minimal buffering"
-            />
-            <FeatureCard 
-              title="TV Guide (EPG)" 
-              description="Comprehensive electronic program guide"
-            />
-            <FeatureCard 
-              title="Catch-Up Feature" 
-              description="Never miss your favorite shows with 7-day catch-up"
-            />
-            <FeatureCard 
-              title="Anti-Freeze Technology" 
-              description="Stable streaming with our proprietary technology"
-            />
-            <FeatureCard 
-              title="24/7 Support" 
-              description="Dedicated support team always ready to help"
-            />
+           <div className="mt-16 text-center">
+            <p className="text-gray-400 text-lg">We accept all major credit cards, PayPal, and cryptocurrency. <br/> Pay with crypto and receive a <span className="text-cyan-400 font-bold">15% discount</span> on your subscription.</p>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-20 px-4 bg-gradient-to-br from-gray-800/50 to-gray-900/50">
+      <section id="faq" className="py-24 px-4">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">Get answers to common questions about our service</p>
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-purple-400">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">Have questions? We have answers. If you don't see your question here, our 24/7 support is ready to assist.</p>
           </div>
           
-          <div className="space-y-4">
+          <div className="space-y-6">
             <FAQItem 
-              question="Which devices are supported?" 
-              answer="Our service works on all major devices including Android TV, Firestick, iOS, Android, Smart TVs, MAG boxes, and more."
-            />
-            <FAQItem 
-              question="How does the free trial work?" 
-              answer="Our free trial gives you full access to our service for 24 hours with no payment required. No credit card needed."
+              question="What devices are compatible with AuraTV?" 
+              answer="AuraTV is compatible with a wide range of devices, including smart TVs (Samsung, LG, Sony), Amazon Firestick, Android TV boxes, Apple TV, iOS and Android smartphones, and web browsers."
             />
             <FAQItem 
-              question="How many devices can I use simultaneously?" 
-              answer="Our standard plan allows for 2 simultaneous connections. We offer options for more connections if needed."
+              question="How does the AI trial work?" 
+              answer="Our 48-hour AI-enhanced trial gives you full, unrestricted access to our Premium tier. No credit card is required. Experience the full power of AuraTV's intelligent streaming platform for yourself."
             />
             <FAQItem 
-              question="What payment methods do you accept?" 
-              answer="We accept PayPal, all major credit cards, and cryptocurrencies (Bitcoin, Ethereum, USDT)."
+              question="Can I upgrade my plan at any time?" 
+              answer="Absolutely. You can upgrade or downgrade your subscription tier at any time through your account dashboard. The change will be prorated and take effect immediately."
             />
             <FAQItem 
-              question="How can I get support if I need help?" 
-              answer="Our 24/7 support team is available via live chat on our website and through our dedicated support ticket system."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Services */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Digital Marketing Services</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">Boost your online presence with our expert marketing solutions</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ServiceCard 
-              title="Social Media Marketing" 
-              description="Increase engagement and reach on all major platforms"
-            />
-            <ServiceCard 
-              title="Email Marketing" 
-              description="Convert leads with targeted email campaigns"
-            />
-            <ServiceCard 
-              title="Link Generation" 
-              description="Drive traffic with strategic backlink strategies"
-            />
-            <ServiceCard 
-              title="Online Presence Analysis" 
-              description="Comprehensive analysis and optimization recommendations"
+              question="What is 'Predictive Streaming'?" 
+              answer="Our proprietary AI technology analyzes your viewing patterns and network stability to intelligently preload segments of the content you're likely to watch next. This virtually eliminates buffering and ensures a seamless experience."
             />
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="pt-20 pb-10 px-4 bg-gray-900">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-            <div>
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
-                <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
-                  NexusStream
-                </span>
-              </div>
-              <p className="text-gray-400">
-                Premium IPTV service delivering global content with exceptional quality and reliability.
-              </p>
+      <footer className="pt-20 pb-10 px-4 border-t border-cyan-500/20 bg-black/50">
+        <div className="container mx-auto text-center">
+            <div className="flex justify-center items-center space-x-3 mb-6">
+                 <div className="w-12 h-12 bg-gradient-to-tr from-cyan-400 to-purple-600 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(0,255,255,0.5)]">
+                    <span className="text-2xl font-bold text-white">A</span>
+                </div>
+                <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-purple-400">AuraTV</span>
             </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Company</h4>
-              <ul className="space-y-3">
-                {['Our Team', 'About Us', 'Careers', 'Press'].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">{item}</a>
-                  </li>
-                ))}
-              </ul>
+            <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+                AuraTV is a paradigm shift in digital entertainment, leveraging artificial intelligence to create a truly personalized and superior streaming service.
+            </p>
+            <div className="flex justify-center space-x-8 mb-10">
+                <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">Terms of Service</a>
+                <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">Privacy Policy</a>
+                <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">Contact Support</a>
             </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Support</h4>
-              <ul className="space-y-3">
-                {['Contact Us', 'Knowledge Base', 'Service Status', 'Tutorials'].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">{item}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Legal</h4>
-              <ul className="space-y-3">
-                {['Terms of Use', 'Privacy Policy', 'Refund Policy', 'Cookie Policy'].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">{item}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          
-          <div className="pt-8 border-t border-gray-800 text-center">
-            <p className="text-gray-500">© 2025 NexusStream. All rights reserved. This is a demo website for educational purposes.</p>
-          </div>
+            <p className="text-gray-500">© 2025 AuraTV. All Rights Reserved. This website is a demonstration and for educational purposes only.</p>
         </div>
       </footer>
     </div>
   );
 }
 
-// Component: Metric Card
-const MetricCard = ({ value, label }) => (
-  <div className="text-center bg-gray-800/30 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-cyan-500/50 transition-all">
-    <div className="text-5xl font-bold text-cyan-400 mb-3">{value}</div>
-    <div className="text-xl font-medium">{label}</div>
-  </div>
-);
-
-// Component: Step Card
-const StepCard = ({ number, title, description }) => (
-  <div className="bg-gray-800/30 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-cyan-500/50 transition-all transform hover:-translate-y-2">
-    <div className="w-14 h-14 rounded-full bg-gradient-to-r from-cyan-600 to-blue-600 flex items-center justify-center text-2xl font-bold mb-6">
-      {number}
+// Component: AI Feature Card
+const AIFeatureCard = ({ title, description }) => (
+  <div className="bg-gray-900/50 backdrop-blur-md p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-400/70 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(0,255,255,0.1)]">
+    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center mb-6 shadow-[0_0_10px_rgba(0,255,255,0.4)]">
+      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
     </div>
-    <h3 className="text-2xl font-bold mb-3">{title}</h3>
-    <p className="text-gray-400">{description}</p>
+    <h3 className="text-2xl font-bold mb-4 text-cyan-300">{title}</h3>
+    <p className="text-gray-400 leading-relaxed">{description}</p>
   </div>
 );
 
 // Component: Pricing Card
-const PricingCard = ({ duration, price, popular }) => (
-  <div className={`relative rounded-2xl overflow-hidden ${popular ? 'border-2 border-cyan-500/50' : 'border border-gray-700'}`}>
+const PricingCard = ({ duration, price, popular, features }) => (
+  <div className={`relative rounded-2xl overflow-hidden bg-gray-900/60 backdrop-blur-xl border transition-all duration-300 ${popular ? 'border-2 border-purple-500 shadow-[0_0_30px_rgba(168,85,247,0.5)]' : 'border border-cyan-500/20'}`}>
     {popular && (
-      <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-cyan-600 to-blue-600 text-center py-2 text-sm font-bold">
-        MOST POPULAR
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/3 bg-gradient-to-r from-cyan-500 to-purple-600 text-center py-2 text-sm font-bold rounded-full shadow-[0_0_15px_rgba(192,132,252,0.6)]">
+        AI RECOMMENDED
       </div>
     )}
     
-    <div className={`p-8 ${popular ? 'pt-16' : ''}`}>
-      <h3 className="text-2xl font-bold mb-2">{duration}</h3>
-      <div className="mb-6">
-        <span className="text-4xl font-bold">${price}</span>
-        <span className="text-gray-400">/ {duration.split(' ')[0]}</span>
+    <div className="p-8 pt-12 text-center">
+      <h3 className="text-3xl font-bold mb-2 text-cyan-300">{duration}</h3>
+      <div className="mb-8">
+        <span className="text-5xl font-bold">${price}</span>
+        <span className="text-gray-400 text-lg">/ month</span>
       </div>
       
-      <ul className="space-y-3 mb-8">
-        {['All Channels Access', '4K Streaming', '2 Devices', '7-Day Catch Up', '24/7 Support'].map((item) => (
-          <li key={item} className="flex items-center">
-            <svg className="w-5 h-5 text-cyan-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            {item}
+      <ul className="space-y-4 mb-10 text-left">
+        {features.map((item) => (
+          <li key={item} className="flex items-center text-lg">
+            <svg className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+            <span className="text-gray-300">{item}</span>
           </li>
         ))}
       </ul>
       
-      <button className={`w-full py-3 rounded-xl font-bold transition-all ${popular 
-        ? 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500' 
-        : 'bg-gray-800 hover:bg-gray-700 border border-gray-700'}`}>
-        Get Started
+      <button className={`w-full py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${popular 
+        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 hover:shadow-[0_0_20px_rgba(192,132,252,0.8)]' 
+        : 'bg-black/50 border-2 border-cyan-400/50 hover:bg-cyan-400/20 hover:border-cyan-300'}`}>
+        Select Plan
       </button>
     </div>
   </div>
 );
 
-// Component: Feature Card
-const FeatureCard = ({ title, description }) => (
-  <div className="bg-gray-800/30 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-cyan-500/50 transition-all">
-    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 flex items-center justify-center mb-6">
-      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-      </svg>
-    </div>
-    <h3 className="text-xl font-bold mb-3">{title}</h3>
-    <p className="text-gray-400">{description}</p>
-  </div>
-);
 
 // Component: FAQ Item
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden">
+    <div className="bg-gray-900/50 backdrop-blur-md rounded-xl border border-cyan-500/20 overflow-hidden transition-all duration-300 hover:border-cyan-400/70">
       <button 
         className="w-full p-6 text-left flex justify-between items-center"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-lg font-medium">{question}</span>
+        <span className="text-xl font-semibold text-cyan-300">{question}</span>
         <svg 
-          className={`w-6 h-6 transition-transform ${isOpen ? 'rotate-180' : ''}`} 
+          className={`w-6 h-6 transition-transform transform text-cyan-400 ${isOpen ? 'rotate-180' : ''}`} 
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"
@@ -418,23 +254,9 @@ const FAQItem = ({ question, answer }) => {
         </svg>
       </button>
       
-      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-40' : 'max-h-0'}`}>
-        <div className="px-6 pb-6 text-gray-400">{answer}</div>
+      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
+        <div className="px-6 pb-6 text-gray-300 text-lg leading-relaxed">{answer}</div>
       </div>
     </div>
   );
 };
-
-// Component: Service Card
-const ServiceCard = ({ title, description }) => (
-  <div className="bg-gray-800/30 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-purple-500/50 transition-all">
-    <h3 className="text-xl font-bold mb-3">{title}</h3>
-    <p className="text-gray-400">{description}</p>
-    <button className="mt-6 text-purple-400 hover:text-purple-300 font-medium flex items-center">
-      Learn more
-      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-      </svg>
-    </button>
-  </div>
-);
