@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Testimonials from '@/components/Testimonials';
 
 export default function FuturisticIPTV() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -162,6 +163,18 @@ export default function FuturisticIPTV() {
         </div>
       </section>
 
+      <div className="mt-16 bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-500/20 rounded-xl p-8">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div>
+              <h3 className="text-2xl font-bold text-white">Ready to Transform Your Trading?</h3>
+              <p className="mt-2 text-gray-300">Join thousands of traders who are already profiting from our signals.</p>
+            </div>
+            <button className="mt-6 md:mt-0 px-8 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium shadow-lg shadow-cyan-500/20 transition-all duration-300">
+              Start Your Free Trial Now
+            </button>
+          </div>
+        </div>
+
       {/* Pricing Plans */}
       <section id="pricing" className="py-20 px-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="container mx-auto">
@@ -182,6 +195,8 @@ export default function FuturisticIPTV() {
           </div>
         </div>
       </section>
+{/* Testimonials Section */}
+<Testimonials />
 
       {/* Feature Comparison */}
       <section id="features" className="py-20 px-4">
@@ -249,6 +264,17 @@ export default function FuturisticIPTV() {
               question="How can I get support if I need help?" 
               answer="Our 24/7 support team is available via live chat on our website and through our dedicated support ticket system."
             />
+          </div>
+        </div>
+        <div className="mt-16 text-center">
+          <div className="inline-block bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-500/20 rounded-xl p-8 max-w-2xl">
+            <h3 className="text-2xl font-bold text-white">Still have questions?</h3>
+            <p className="mt-4 text-gray-300">
+              Our support team is ready to help you with any questions about our service.
+            </p>
+            <button className="mt-6 px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium shadow-lg shadow-cyan-500/20 transition-all duration-300">
+              Contact Support
+            </button>
           </div>
         </div>
       </section>
