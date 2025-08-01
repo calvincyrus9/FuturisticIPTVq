@@ -50,12 +50,31 @@ export default function FuturisticIPTV() {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center text-center relative overflow-hidden px-4">
-        <div className="absolute inset-0 w-full h-full bg-black/50"></div>
-        <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-[-1] opacity-30">
-          <source src="https://cdn.pixabay.com/video/2021/11/14/9583-667202353_large.mp4" type="video/mp4" />
+        {/* The video element is positioned in the background. */}
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          poster="/path/to/your/poster-image.jpg" // Optional: Add a poster image for a better loading experience
+          className="absolute top-0 left-0 w-full h-full object-cover z-[-1] opacity-40"
+        >
+          {/* === IMPORTANT: REPLACE THIS WITH THE PATH TO YOUR VIDEO === */}
+          <source src="/hero.m4v" type="video/m4v" />
+          
+          {/* Optional: You can add other video formats like .webm for better browser compatibility */}
+          {/* <source src="/your-video-file.webm" type="video/webm" /> */}
+
+          Your browser does not support the video tag.
         </video>
+
+        {/* This div adds a dark overlay so the text on top is readable. You can adjust the opacity (e.g., bg-black/60) */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* This adds a subtle gradient from the bottom up, helping the transition to the next section */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
         
+        {/* The z-10 class ensures this content appears on top of the video and overlays */}
         <div className="relative z-10 flex flex-col items-center">
             <h1 className="text-6xl md:text-8xl font-extrabold mb-6 leading-tight tracking-wide">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-purple-500 drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]">
