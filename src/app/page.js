@@ -64,7 +64,7 @@ export default function FuturisticIPTV() {
               Redefined.
             </h1>
             <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              AuraTV's intelligent platform learns your preferences to curate a personalized universe of entertainment. Experience flawless 4K/8K streaming, predictive content delivery, and zero buffering.
+              AuraTV&apos;s intelligent platform learns your preferences to curate a personalized universe of entertainment. Experience flawless 4K/8K streaming, predictive content delivery, and zero buffering.
             </p>
             
             <div className="flex flex-wrap gap-6">
@@ -139,7 +139,7 @@ export default function FuturisticIPTV() {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-purple-400">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">Have questions? We have answers. If you don't see your question here, our 24/7 support is ready to assist.</p>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">Have questions? We have answers. If you don&apos;t see your question here, our 24/7 support is ready to assist.</p>
           </div>
           
           <div className="space-y-6">
