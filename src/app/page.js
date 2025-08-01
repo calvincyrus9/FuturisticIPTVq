@@ -58,7 +58,7 @@ export default function FuturisticIPTV() {
     <div 
       className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-cover bg-no-repeat bg-center opacity-20 md:opacity-40"
       style={{ 
-        backgroundImage: `url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')`,
+        backgroundImage: `url('https://www.u.com.my/content/dam/u-mobile/personal/deals/rm120-mnp-rebate/topbanner_Postpaid%20MNP%20Rebate%20Campaign_desktop.png')`,
         backgroundPosition: 'right center'
       }}
     ></div>
