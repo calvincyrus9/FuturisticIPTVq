@@ -48,35 +48,55 @@ export default function FuturisticIPTV() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="pt-40 pb-28 px-4 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-20">
-          <div className="absolute -top-1/3 -left-1/4 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-cyan-500/30 to-blue-500/30"></div>
-          <div className="absolute -bottom-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-purple-500/30 to-pink-500/30"></div>
-        </div>
-        
-        <div className="container mx-auto relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
-                The Future of Streaming
-              </span><br />
-              Is Here
-            </h1>
-            <p className="text-xl text-gray-300 mb-10 max-w-2xl">
-              Experience global live sports, premium channels, and 4K entertainment without buffering. Stream seamlessly across multiple devices.
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-xl font-bold text-lg border border-gray-700 transition-all">
-                Renew My Access
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+<section id="home" className="pt-40 pb-28 px-4 relative overflow-hidden">
+  {/* Background layers */}
+  <div className="absolute top-0 left-0 w-full h-full z-0">
+    {/* Dark overlay for text readability */}
+    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
+    
+    {/* Futuristic background image on the right */}
+    <div 
+      className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-cover bg-no-repeat bg-center opacity-20 md:opacity-40"
+      style={{ 
+        backgroundImage: `url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')`,
+        backgroundPosition: 'right center'
+      }}
+    ></div>
+    
+    {/* Gradient elements */}
+    <div className="absolute top-0 left-0 w-full h-full opacity-20">
+      <div className="absolute -top-1/3 -left-1/4 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-cyan-500/30 to-blue-500/30"></div>
+      <div className="absolute -bottom-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-purple-500/30 to-pink-500/30"></div>
+    </div>
+    
+    {/* Grid pattern overlay */}
+    <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gNDAgMCBMIDAgMCAwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
+  </div>
+  
+  <div className="container mx-auto relative z-10">
+    <div className="max-w-3xl">
+      <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+          The Future of Streaming
+        </span><br />
+        Is Here
+      </h1>
+      <p className="text-xl text-gray-300 mb-10 max-w-2xl">
+        Experience global live sports, premium channels, and 4K entertainment without buffering. 
+        Stream seamlessly across multiple devices.
+      </p>
+      
+      <div className="flex flex-wrap gap-4">
+        <button className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40">
+          Start Free Trial
+        </button>
+        <button className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-xl font-bold text-lg border border-gray-700 transition-all hover:border-cyan-500/30">
+          Renew My Access
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Overview Section */}
       <section className="py-20 px-4">
