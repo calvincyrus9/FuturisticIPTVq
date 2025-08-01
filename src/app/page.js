@@ -55,14 +55,7 @@ export default function FuturisticIPTV() {
     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
     
     {/* Futuristic background image on the right */}
-    <div 
-      className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-cover bg-no-repeat bg-center opacity-20 md:opacity-40"
-      style={{ 
-        backgroundImage: `url('https://www.u.com.my/content/dam/u-mobile/personal/deals/rm120-mnp-rebate/topbanner_Postpaid%20MNP%20Rebate%20Campaign_desktop.png')`,
-        backgroundPosition: 'right center'
-      }}
-    ></div>
-    
+  
     {/* Gradient elements */}
     <div className="absolute top-0 left-0 w-full h-full opacity-20">
       <div className="absolute -top-1/3 -left-1/4 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-cyan-500/30 to-blue-500/30"></div>
