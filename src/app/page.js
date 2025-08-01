@@ -48,46 +48,186 @@ export default function FuturisticIPTV() {
         </nav>
       </header>
 
-     {/* Hero Section */}
-<section id="home" className="pt-40 pb-28 px-4 relative overflow-hidden">
-  {/* Background layers */}
-  <div className="absolute top-0 left-0 w-full h-full z-0">
-    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
-
-    {/* Gradient elements */}
-    <div className="absolute top-0 left-0 w-full h-full opacity-20">
-      <div className="absolute -top-1/3 -left-1/4 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-cyan-500/30 to-blue-500/30"></div>
-      <div className="absolute -bottom-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-purple-500/30 to-pink-500/30"></div>
+     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+  {/* Hero Section */}
+  <section id="home" className="pt-40 pb-28 px-4 relative overflow-hidden min-h-screen flex items-center">
+    {/* Background layers */}
+    <div className="absolute top-0 left-0 w-full h-full z-0">
+      {/* Dark gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/80 to-gray-900/90"></div>
+      
+      {/* Animated grid pattern */}
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M0 0h2v100H0zM4 0h2v100H4zM8 0h2v100H8zM12 0h2v100h-2zM16 0h2v100h-2zM20 0h2v100h-2zM24 0h2v100h-2zM28 0h2v100h-2zM32 0h2v100h-2zM36 0h2v100h-2zM40 0h2v100h-2zM44 0h2v100h-2zM48 0h2v100h-2zM52 0h2v100h-2zM56 0h2v100h-2zM60 0h2v100h-2zM64 0h2v100h-2zM68 0h2v100h-2zM72 0h2v100h-2zM76 0h2v100h-2zM80 0h2v100h-2zM84 0h2v100h-2zM88 0h2v100h-2zM92 0h2v100h-2zM96 0h2v100h-2zM0 0v2h100V0zM0 4v2h100V4zM0 8v2h100V8zM0 12v2h100v-2zM0 16v2h100v-2zM0 20v2h100v-2zM0 24v2h100v-2zM0 28v2h100v-2zM0 32v2h100v-2zM0 36v2h100v-2zM0 40v2h100v-2zM0 44v2h100v-2zM0 48v2h100v-2zM0 52v2h100v-2zM0 56v2h100v-2zM0 60v2h100v-2zM0 64v2h100v-2zM0 68v2h100v-2zM0 72v2h100v-2zM0 76v2h100v-2zM0 80v2h100v-2zM0 84v2h100v-2zM0 88v2h100v-2zM0 92v2h100v-2zM0 96v2h100v-2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E")`,
+          backgroundSize: "100px 100px"
+        }}
+      ></div>
+      
+      {/* Animated gradient elements */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        {/* Large cyan blob */}
+        <div className="absolute top-1/4 -left-[10%] w-[40%] aspect-square rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 animate-blob animation-delay-2000 blur-3xl"></div>
+        
+        {/* Purple blob */}
+        <div className="absolute top-1/2 -right-[10%] w-[35%] aspect-square rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 animate-blob animation-delay-4000 blur-3xl"></div>
+        
+        {/* Small blue blob */}
+        <div className="absolute top-1/3 right-[15%] w-[15%] aspect-square rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 animate-blob animation-delay-7000 blur-2xl"></div>
+      </div>
+      
+      {/* Floating 3D sphere */}
+      <div className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full">
+        <div className="w-full h-full relative animate-float">
+          {/* Sphere gradient */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/10 to-blue-500/20 shadow-[inset_0_0_50px_rgba(6,182,212,0.3)] backdrop-blur-sm border border-cyan-500/20"></div>
+          
+          {/* Glossy effect */}
+          <div className="absolute top-1/4 left-1/4 w-1/3 h-1/3 rounded-full bg-white/10 blur-md"></div>
+          
+          {/* Inner glow */}
+          <div className="absolute inset-8 rounded-full bg-gradient-to-br from-cyan-400/5 to-blue-500/10 shadow-[0_0_30px_rgba(6,182,212,0.5)]"></div>
+        </div>
+      </div>
+      
+      {/* Floating particles */}
+      {Array.from({ length: 15 }).map((_, i) => (
+        <div 
+          key={i}
+          className="absolute rounded-full bg-cyan-400/20 animate-particle"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            width: `${Math.random() * 10 + 2}px`,
+            height: `${Math.random() * 10 + 2}px`,
+            animationDuration: `${Math.random() * 10 + 10}s`,
+            animationDelay: `${Math.random() * 5}s`
+          }}
+        ></div>
+      ))}
     </div>
-
-    {/* Grid pattern overlay */}
-    <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gNDAgMCBMIDAgMCAwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
-  </div>
-
-  <div className="container mx-auto relative z-10 flex items-center justify-center min-h-[60vh] text-center">
-    <div className="max-w-3xl">
-      <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
-          The Future of Streaming
-        </span><br />
-        Is Here
-      </h1>
-      <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-        Experience global live sports, premium channels, and 4K entertainment without buffering. 
-        Stream seamlessly across multiple devices.
-      </p>
-
-      <div className="flex flex-wrap justify-center gap-4">
-        <button className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40">
-          Start Free Trial
-        </button>
-        <button className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-xl font-bold text-lg border border-gray-700 transition-all hover:border-cyan-500/30">
-          Renew My Access
-        </button>
+    
+    <div className="container mx-auto relative z-10">
+      <div className="max-w-2xl">
+        <div className="mb-8">
+          <div className="inline-block px-4 py-2 bg-cyan-900/30 backdrop-blur-sm rounded-full border border-cyan-500/30 mb-4">
+            <span className="text-cyan-400 font-medium tracking-wider">PREMIUM STREAMING</span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+              The Future of Streaming
+            </span><br />
+            <span className="text-white">Is Here</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl">
+            Experience global live sports, premium channels, and 4K entertainment without buffering. 
+            Stream seamlessly across multiple devices with our cutting-edge technology.
+          </p>
+          
+          <div className="flex flex-wrap gap-4">
+            <button className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+              </svg>
+              Start Free Trial
+            </button>
+            <button className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-xl font-bold text-lg border border-gray-700 transition-all hover:border-cyan-500/30 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              Renew My Access
+            </button>
+          </div>
+        </div>
+        
+        {/* Stats section */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl">
+          <div className="bg-gray-800/30 backdrop-blur-sm p-4 rounded-xl border border-gray-700">
+            <div className="text-3xl font-bold text-cyan-400">60K+</div>
+            <div className="text-gray-400">Users</div>
+          </div>
+          <div className="bg-gray-800/30 backdrop-blur-sm p-4 rounded-xl border border-gray-700">
+            <div className="text-3xl font-bold text-cyan-400">4.9/5</div>
+            <div className="text-gray-400">Rating</div>
+          </div>
+          <div className="bg-gray-800/30 backdrop-blur-sm p-4 rounded-xl border border-gray-700">
+            <div className="text-3xl font-bold text-cyan-400">99.9%</div>
+            <div className="text-gray-400">Uptime</div>
+          </div>
+          <div className="bg-gray-800/30 backdrop-blur-sm p-4 rounded-xl border border-gray-700">
+            <div className="text-3xl font-bold text-cyan-400">24/7</div>
+            <div className="text-gray-400">Support</div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  
+  <style jsx global>{`
+    @keyframes blob {
+      0% {
+        transform: translate(0px, 0px) scale(1);
+      }
+      33% {
+        transform: translate(30px, -50px) scale(1.1);
+      }
+      66% {
+        transform: translate(-20px, 20px) scale(0.9);
+      }
+      100% {
+        transform: translate(0px, 0px) scale(1);
+      }
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+    
+    @keyframes particle {
+      0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(calc(-50vw + 100px)) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    
+    .animate-blob {
+      animation: blob 15s infinite ease-in-out;
+    }
+    
+    .animate-float {
+      animation: float 6s infinite ease-in-out;
+    }
+    
+    .animate-particle {
+      animation: particle linear infinite;
+    }
+    
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+    
+    .animation-delay-7000 {
+      animation-delay: 7s;
+    }
+  `}</style>
+</div>
 
 
       {/* Overview Section */}
