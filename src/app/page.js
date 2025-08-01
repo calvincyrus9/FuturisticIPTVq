@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Testimonials from '@/components/Testimonials';
+import Testimonials from './components/Testimonials';
 
 export default function FuturisticIPTV() {
   const [isScrolled, setIsScrolled] = useState(false);
