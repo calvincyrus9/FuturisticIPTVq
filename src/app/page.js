@@ -34,7 +34,7 @@ export default function FuturisticIPTV() {
           </div>
           
           <div className="hidden md:flex space-x-8">
-            {['Home', 'Free Trial', 'Renew', 'Features', 'FAQ'].map((item) => (
+            {['Home', 'Free Trial & Renew', 'Pricing', 'Features', 'FAQ'].map((item) => (
               <a key={item} href={`#${item.toLowerCase().replace(' ', '-')}`} className="font-medium hover:text-cyan-400 transition-colors">
                 {item}
               </a>
