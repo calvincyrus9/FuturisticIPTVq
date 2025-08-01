@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Testimonials from '@/components/Testimonials';
+import Testimonials from './components/Testimonials';
 
 export default function FuturisticIPTV() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -159,7 +159,8 @@ export default function FuturisticIPTV() {
               title="Renew Anytime" 
               description="Continue your subscription with flexible renewal options"
             />
-          
+            <div className="mt-16 bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-500/20 rounded-xl p-8">
+          <div className="flex flex-col md:flex-row items-center justify-between">
             <div>
               <h3 className="text-2xl font-bold text-white">Ready to Transform Your Trading?</h3>
               <p className="mt-2 text-gray-300">Join thousands of traders who are already profiting from our signals.</p>
@@ -169,7 +170,8 @@ export default function FuturisticIPTV() {
             </button>
           </div>
         </div>
-      
+          </div>
+        </div>
       </section>
 
       
